@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+
+{% extends 'layout.html' %}
+
+{% block content %}
+
+<h1>Lisää uusi tapahtuma</h1>
+    
+<form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}  <!-- Renderöi lomake HTML-muodossa -->
+    <button type="submit">Lähetä</button>
+</form>
+
+{% endblock %}
