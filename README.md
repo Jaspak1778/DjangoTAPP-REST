@@ -1,3 +1,5 @@
+Kun Django REST API laitetaan pilveen esim Axure niin tarvitaan CORS määritykset:
+
 REST API:n CORS Määritykset
 
 #terminal:
