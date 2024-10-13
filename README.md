@@ -3,29 +3,25 @@ REST Memo.
 Jos halutaan ottaa yhteys Frontendillä API rajapintaan, React yms tai Django projekti asetetaan pilvipalveluun niin CORS tulee olla käytössä.
 
 
-CORS Asennus Djangoon: (venv)omaprojekti> .
-bash:
+bash:'CORS Asennus Djangoon: (venv)omaprojekti>'
 
     pip install django-headers
 
-Lisää INSTALLED_APPS-listaan.
-settings.py:
+settings.py:'Lisää INSTALLED_APPS-listaan'
+
     
     INSTALLED_APPS = [
     ...
     'corsheaders',
     ...]
 
-Lisää MIDDLEWARE-listan alkuun.
-settings.py:
+settings.py:'Lisää MIDDLEWARE-listan alkuun'
     
     MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
     ...]
 
-Määritä sallitut alkuperät.
-settings.py:
-
+settings.py:'Määritä sallitut alkuperät'
     
     CORS_ALLOWED_ORIGINS = [
         "https://www.esimerkki.com",
