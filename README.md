@@ -1,5 +1,9 @@
-REST Memo.
+Memo.
 
+Huom:
+Poista SECRET KEYn näkyvyys oikeassa tuotanto ympäristössä.
+
+REST API
 Jos halutaan ottaa yhteys Frontendillä API rajapintaan, React yms tai Django projekti asetetaan pilvipalveluun niin CORS tulee olla käytössä.
 
 
