@@ -1,17 +1,15 @@
-Kun Django REST API laitetaan pilveen (esim. Azure), tarvitaan CORS-määritykset:
+REST Memo.
 
-CORS Määritykset
+Jos halutaan ottaa yhteys Frontendillä API rajapintaan, React yms tai Django projekti asetetaan pilvipalveluun niin CORS tulee olla käytössä.
 
-    Asennus:
+CORS Asennus Djangoon: (venv)omaprojekti>
 
     bash:
     pip install django-headers
 
-settings.py:
+Lisää INSTALLED_APPS-listaan:
 
-    Lisää INSTALLED_APPS-listaan:
-
-    python
+    settings.py:
     INSTALLED_APPS = [
     ...
     'corsheaders',
@@ -19,14 +17,14 @@ settings.py:
 
 Lisää MIDDLEWARE-listan alkuun:
 
+    settings.py:
     MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
     ...]
 
-
-
 Määritä sallitut alkuperät:
 
+    settings.py:
     CORS_ALLOWED_ORIGINS = [
         "https://www.esimerkki.com",
         "https://toinen-esimerkki.com",
